@@ -1,0 +1,96 @@
+Game Design Document: Area
+1. Game Overview
+Title: Area
+Genre: Stylized FPS / Tactical Arena / Battle Royale
+Platform: PC only
+Perspective: First-Person
+Player Count: 5–20 players (2 teams max 10 per team)
+Art Style: Low-poly, stylized, minimalist. Hexagon motif in gameplay and UI.
+Game Feel: Fortnite-style building/movement freedom + Halo weapon pickup + Call-of-Duty-like gun combat finesse
+Premise:
+Players are dropped into a dome arena without weapons and must find them on the map. Traditional “kills” are modified: players have life shards in their home base, meaning defeating someone requires stealing and returning their shard. Only teammates can revive them.
+2. Core Mechanics
+2.1 Movement & Combat
+Walk, sprint, jump, crouch
+Build low-poly structures (ramps, walls, floors) for cover or height advantage
+Weapons:
+Pistol
+Assault Rifle
+Shotgun
+Sniper
+Special-grade (rare spawns at designated drop points)
+Melee: Fist, Knife (body damage system: head > body > limbs)
+Weapon pickups spawn at fixed or randomized locations (like Halo)
+2.2 Life Shard System
+Each player has a life shard in their team’s home base
+Collecting an opponent’s shard and returning it to your base disintegrates the opposing player immediately
+Only the shard owner’s teammate can return it to revive them
+Encourages strategy and teamwork over raw killing
+2.3 Perks / Chance Blocks
+Hexagon-themed blocks scattered on the map or behind walls
+Activated using action button → random perk
+Examples:
+Grow 3x larger
+Infinite ammo
+Increased run speed (limited time)
+Perks randomized each round
+Encourages dynamic, unpredictable gameplay
+3. Arena & Map Design
+3.1 Standard Dome Arena
+Medium-sized, closed dome
+Strategic weapon spawns
+Team bases with life shards clearly marked
+Low-poly terrain: ramps, walls, floors (placeholders or custom assets)
+3.2 Battle Royale Arena (Optional/Advanced)
+Large map, open environment
+Safe zone shrinks over time (classic Battle Royale style)
+Last team or player alive wins
+Weapon/perk drops scattered across the map
+3.3 Visual Style
+Minimalist, low-poly design
+Hexagons as the recurring theme:
+Perk blocks
+Some terrain patterns
+UI elements
+Player models: simple, gender-based variations only
+Future modding support possible for skins or map variations
+4. Game Loop
+Players drop into arena (empty-handed or starting weapon)
+Players search for weapons and build for cover
+Combat occurs to steal life shards and defend own shard
+Activate perks via chance blocks for tactical advantage
+Teammates can revive shard-less players
+Round ends when all opponents’ shards are captured OR in Battle Royale mode, last player/team standing
+5. Combat Mechanics & Damage
+Headshot → highest damage
+Body → medium
+Limbs → low
+Melee damage: fists/knife for close combat
+Firearms balanced for low-to-mid combat intensity
+Special weapons less frequent → higher impact
+6. Spawn & Respawn
+Players spawn at home base initially
+Weapon pickups scattered in arena
+Life shard system replaces traditional respawn:
+No shard → cannot play until revived by teammate
+Encourages coordination
+7. Progression & Scoring
+No leaderboard for now
+Future: XP, cosmetic unlocks, skins, or mod support possible
+8. Game Feel / Key Design Goals
+Stylized but competitive
+Fast, strategic gameplay — not purely shooting
+Hexagon motif visible in perks, map, and UI
+Low-poly aesthetic keeps focus on gameplay mechanics
+Tactical teamwork is rewarded over lone-wolf kills
+9. Assets & Placeholders
+Ramps, walls, floors — can be replaced with final assets later
+Weapon models: basic placeholders
+Perk blocks: hexagonal objects with interaction triggers
+Low-poly environment: keeps game performant and visually cohesive
+10. Future Expansion Ideas
+Leaderboards, stats tracking
+Cosmetic skins / modding support
+Advanced Battle Royale arena
+Additional weapons, vehicles, or special-grade guns
+Team emblems / shard customization
