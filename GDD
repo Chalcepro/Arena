@@ -6,41 +6,47 @@ Platform: PC only
 Perspective: First-Person
 Player Count: 5–10 players (2 teams max 10 per team)
 Art Style: Low-poly, stylized, minimalist. Hexagon motif in gameplay and UI.
-Game Feel: Fortnite-style building/movement freedom + Halo weapon pickup + Call-of-Duty-like gun combat finesse
+Game Feel: Fortnite-style movement (jump, slide, free fall) freedom + Halo weapon pickup + Call-of-Duty-like gun combat finesse (aim, fire, recoil) 
 Premise:
-Players are dropped into a dome arena without weapons and must find them on the map. Traditional “kills” are modified: players have life shards in their home base, meaning defeating someone requires stealing and returning their shard. Only teammates can revive them.
+Players (in normal mode) are already placed in teams similar to codm while in arena mode they are dropped into a dome arena without weapons and must find them on the map. Traditional “kills” are modified: players have life shards in their home base, meaning defeating someone requires stealing and returning their shard (like capture the flag) even though the shard has been placed in the opposing team, if a teammate gets that shard and places it back on their side the fallen player will respawn. Only teammates can revive them. If there are no teammates left, then the match is over. 
 2. Core Mechanics
 2.1 Movement & Combat
 Walk, sprint, jump, crouch
-Build low-poly structures (ramps, walls, floors) for cover or height advantage
+Build MOMENTUM over low-poly structures (ramps, walls, floors) for cover or height advantage and speed. Giving it a flow feel to the game
 Weapons:
 Pistol
 Assault Rifle
 Shotgun
 Sniper
 Special-grade (rare spawns at designated drop points)
-Melee: Fist, Knife (body damage system: head > body > limbs)
-Weapon pickups spawn at fixed or randomized locations (like Halo)
+Melee: Fist, Knigam
+Body damage system: head > body > limbs (decrease in damage deal that by action) 
+Weapon pickups spawn at fixed or randomized locations (like Halo) in Arena mode while in normal MP mode they spawn in with the class they picked and weapon (similar to blood strike) 
 2.2 Life Shard System
-Each player has a life shard in their team’s home base
+Each player has 1 life shard in their team’s home base
 Collecting an opponent’s shard and returning it to your base disintegrates the opposing player immediately
 Only the shard owner’s teammate can return it to revive them
 Encourages strategy and teamwork over raw killing
 2.3 Perks / Chance Blocks
-Hexagon-themed blocks scattered on the map or behind walls
+Hexagon-themed blocks scattered (or placed in team base not desired yet) on the map or on walls
 Activated using action button → random perk
 Examples:
 Grow 3x larger
 Infinite ammo
+Extra life (should only appear ONCE a game) 
+Shield
+Shrink 3x
 Increased run speed (limited time)
 Perks randomized each round
 Encourages dynamic, unpredictable gameplay
+BUT depending on the perk there would be a consequence. E.g Should would make you slower, Grow 3x would make you larger and give you extra health but you are a bigger target, Shrink 3x would make you hard to hit but you cover less distance. e.t.c
+
 3. Arena & Map Design
-3.1 Standard Dome Arena
+3.1 Standard Dome Arena (medium variation to reduce camp spots and encourage movement) 
 Medium-sized, closed dome
 Strategic weapon spawns
-Team bases with life shards clearly marked
-Low-poly terrain: ramps, walls, floors (placeholders or custom assets)
+Team bases with life shards (only in normal mode) clearly marked. But in arena YOU carry your shard (it would be advices to play in a team) each team would be given a color (making them distinguishable from others and it will match the shard) when killed, team members can revive them (CAUTION: they will spawn EXACTLY where they died) each member will and must look different either varying in height, stature or gender
+Low-poly terrain: ramps, walls, floors (placeholders or custom assets which would be modified later in future)
 3.2 Battle Royale Arena (Optional/Advanced)
 Large map, open environment
 Safe zone shrinks over time (classic Battle Royale style)
@@ -60,14 +66,14 @@ Players search for weapons and build for cover
 Combat occurs to steal life shards and defend own shard
 Activate perks via chance blocks for tactical advantage
 Teammates can revive shard-less players
-Round ends when all opponents’ shards are captured OR in Battle Royale mode, last player/team standing
+Round ends when all opponents’ shards are captured but not in Battle Royale mode (player shard will remain on the death spot and then respawn over time), last player/team standing
 5. Combat Mechanics & Damage
 Headshot → highest damage
 Body → medium
 Limbs → low
 Melee damage: fists/knife for close combat
 Firearms balanced for low-to-mid combat intensity
-Special weapons less frequent → higher impact
+Special weapons less frequent → higher impact but unusual (cartoon physics weapons...will explain later) 
 6. Spawn & Respawn
 Players spawn at home base initially
 Weapon pickups scattered in arena
