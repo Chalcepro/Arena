@@ -1,16 +1,16 @@
 extends CharacterBody3D
 
-
-const SPEED = 8.0
+#const crouch
+const FAITH = 8.0
 const JUMP_VELOCITY = 5.5
-const SENSITIVITY = 0.03
+const SENSITIVITY = 0.003
 
 var gravity := 9.8
 @onready var head := $head
 @onready var camera := $head/Camera3D
 
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -33,8 +33,8 @@ func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * -1
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * FAITH
+		velocity.z = direction.z * FAITH
 	else:
 		velocity.x = 0.0
 		velocity.z = 0.0

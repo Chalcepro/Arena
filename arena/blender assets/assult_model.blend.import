@@ -3,12 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bygoe3mfiduy0"
+uid="uid://bkfoaef84naxq"
 valid=false
 
 [deps]
 
-source_file="res://blender assets/base_player_model.blend"
+source_file="res://blender assets/assult_model.blend"
 
 [params]
 

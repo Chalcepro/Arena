@@ -1,10 +1,16 @@
-[gd_scene load_steps=28 format=4 uid="uid://dk01bqwhi1152"]
+[gd_scene load_steps=30 format=4 uid="uid://dk01bqwhi1152"]
 
+[ext_resource type="Shader" uid="uid://c18f2s6lv6efp" path="res://material/wall_2.gdshader" id="1_5t4e2"]
 [ext_resource type="PackedScene" uid="uid://bm0t720phy2qs" path="res://blender assets/bricks.blend" id="1_ns6u7"]
 [ext_resource type="PackedScene" uid="uid://brigfbx2lvrl2" path="res://scenes/player.tscn" id="2_5t4e2"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xvgsr"]
+render_priority = 0
+shader = ExtResource("1_5t4e2")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hhqj2"]
 resource_name = "Material"
+next_pass = SubResource("ShaderMaterial_xvgsr")
 cull_mode = 2
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.4
@@ -3203,7 +3209,6 @@ shape = SubResource("ConcavePolygonShape3D_davg2")
 [node name="wall_obstacle_8" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.99076, 0, 36.7391)
 mesh = SubResource("ArrayMesh_st0g8")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall_obstacle_8"]
 
