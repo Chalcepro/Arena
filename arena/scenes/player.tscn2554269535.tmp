@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://brigfbx2lvrl2"]
+
+[ext_resource type="Script" uid="uid://ijc6poxlt25k" path="res://scripts/character_body_3d.gd" id="1_3vyb7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3vyb7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[node name="PlayerNode" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_3vyb7")
+
+[node name="head" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="camera_smooth" type="Node3D" parent="CharacterBody3D/head"]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/head/camera_smooth"]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CharacterBody3D/head"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="CharacterBody3D/head"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/head/Area3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.5, 0)
+shape = SubResource("SphereShape3D_3vyb7")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523193, 0)
+height = 1.05
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_u8vuu")
