@@ -1,14 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://brigfbx2lvrl2"]
+[gd_scene load_steps=9 format=3 uid="uid://brigfbx2lvrl2"]
 
 [ext_resource type="Script" uid="uid://ijc6poxlt25k" path="res://scripts/character_body_3d.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://dnwf6niomge4" path="res://scenes/move.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://ckowox01p6ied" path="res://scenes/look.gd" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://o5xec1gmmct5" path="res://scenes/gun.gd" id="4_dqkch"]
 
 [sub_resource type="Texture2DRD" id="Texture2DRD_3vyb7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3vyb7"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qlg0r"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+radius = 0.25
+height = 0.5
 
 [node name="PlayerNode" type="Node3D"]
 
@@ -22,6 +27,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="camera_smooth" type="Node3D" parent="CharacterBody3D/head"]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/head/camera_smooth"]
+
+[node name="AimRay" type="RayCast3D" parent="CharacterBody3D/head/camera_smooth/Camera3D"]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="CharacterBody3D/head/camera_smooth"]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
@@ -48,10 +55,22 @@ script = ExtResource("2_g2els")
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 shape = SubResource("SphereShape3D_3vyb7")
 
+[node name="weapon" type="Node3D" parent="CharacterBody3D/head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.33454e-08, 0, -0.724586)
+
+[node name="gun" type="MeshInstance3D" parent="CharacterBody3D/head/weapon"]
+transform = Transform3D(0.3, 0, 0, 0, -2.18557e-08, -0.3, 0, 0.5, -1.31134e-08, 0.689598, -0.392707, 0.00272053)
+mesh = SubResource("CapsuleMesh_qlg0r")
+script = ExtResource("4_dqkch")
+
+[node name="Muzzle" type="Marker3D" parent="CharacterBody3D/head/weapon/gun"]
+
+[node name="Tracer" type="MeshInstance3D" parent="CharacterBody3D/head/weapon/gun"]
+
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523193, 0)
 height = 1.05
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_u8vuu")
