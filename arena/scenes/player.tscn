@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://brigfbx2lvrl2"]
+[gd_scene load_steps=10 format=3 uid="uid://brigfbx2lvrl2"]
 
-[ext_resource type="Script" uid="uid://ijc6poxlt25k" path="res://scripts/character_body_3d.gd" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://dnwf6niomge4" path="res://scenes/move.gd" id="2_g2els"]
-[ext_resource type="Script" uid="uid://ckowox01p6ied" path="res://scenes/look.gd" id="2_qhqgy"]
-[ext_resource type="Script" uid="uid://o5xec1gmmct5" path="res://scenes/gun.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://cltpaojnif0d7" path="res://scripts/weapon_manager.gd" id="1_qlg0r"]
+[ext_resource type="Script" uid="uid://dnwf6niomge4" path="res://scripts/move.gd" id="2_g2els"]
+[ext_resource type="Script" uid="uid://ckowox01p6ied" path="res://scripts/look.gd" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://o5xec1gmmct5" path="res://scripts/gun.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://deymmoq0mrpin" path="res://scenes/health.gd" id="5_qlg0r"]
 
 [sub_resource type="Texture2DRD" id="Texture2DRD_3vyb7"]
 
@@ -19,7 +20,7 @@ height = 0.5
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
-script = ExtResource("1_3vyb7")
+script = ExtResource("1_qlg0r")
 
 [node name="head" type="Node3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -74,3 +75,6 @@ height = 1.05
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="health" type="Node3D" parent="CharacterBody3D"]
+script = ExtResource("5_qlg0r")
