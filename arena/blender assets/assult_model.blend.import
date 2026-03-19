@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkfoaef84naxq"
-valid=false
+uid="uid://8t0688h84qfe"
+path="res://.godot/imported/assult_model.blend-0fe65eabad42d5e2f24774ff673ff2ad.scn"
 
 [deps]
 
 source_file="res://blender assets/assult_model.blend"
+dest_files=["res://.godot/imported/assult_model.blend-0fe65eabad42d5e2f24774ff673ff2ad.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://jwdn0a4qsmhy"
-path="res://.godot/imported/retro_house.blend-96b39f87ce47375c62f0a4bedbc37558.scn"
+uid="uid://cs5aibbhfrgpo"
+path="res://.godot/imported/test_ground.blend-ff31d7e59e0a353b95a275108728b95b.scn"
 
 [deps]
 
-source_file="res://blender assets/retro_house.blend"
-dest_files=["res://.godot/imported/retro_house.blend-96b39f87ce47375c62f0a4bedbc37558.scn"]
+source_file="res://blender assets/test_ground.blend"
+dest_files=["res://.godot/imported/test_ground.blend-ff31d7e59e0a353b95a275108728b95b.scn"]
 
 [params]
 

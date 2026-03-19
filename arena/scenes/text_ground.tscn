@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhqkd71hnot60"]
+
+[ext_resource type="PackedScene" uid="uid://cs5aibbhfrgpo" path="res://blender assets/test_ground.blend" id="1_ictke"]
+[ext_resource type="PackedScene" uid="uid://brigfbx2lvrl2" path="res://scenes/player.tscn" id="2_ax6tl"]
+[ext_resource type="PackedScene" uid="uid://b1u0w8ihhxjmg" path="res://scenes/lights.tscn" id="3_hmsoc"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="test_ground" parent="." instance=ExtResource("1_ictke")]
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_ax6tl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39972, 4.3888, -44.5324)
+
+[node name="Node3D" parent="." instance=ExtResource("3_hmsoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.170547, 0, -29.9811)

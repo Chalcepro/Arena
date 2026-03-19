@@ -2,6 +2,7 @@ extends Node
 
 @export var starting_weapon: WeaponData
 @export var weapon_slot_count := 2
+@export var gun_node: Node3D
 
 var weapons: Array[WeaponData] = []
 var current_weapon_index := 0
@@ -11,10 +12,8 @@ signal weapon_switched(weapon_index: int)
 signal weapon_pickup_failed(reason: String)
 
 func _ready():
-	# Find the gun node
-	current_weapon_node = get_node_or_null("../head/camera_smooth/Area3D/weapon/gun")
+	current_weapon_node = gun_node
 	if current_weapon_node and starting_weapon:
-		# Set the weapon data
 		if current_weapon_node.has_method("set_weapon_data"):
 			current_weapon_node.weapon_data = starting_weapon
 			current_weapon_node._ready()  # Re-initialize
@@ -31,11 +30,9 @@ func pickup_weapon(new_weapon: WeaponData) -> bool:
 	# Check if we have space
 	if weapons.size() < weapon_slot_count:
 		weapons.append(new_weapon)
-		# Switch to new weapon
 		switch_to_weapon(weapons.size() - 1)
 		return true
 	else:
-		# Replace current weapon
 		weapons[current_weapon_index] = new_weapon
 		switch_to_weapon(current_weapon_index)
 		return true

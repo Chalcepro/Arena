@@ -37,7 +37,7 @@ var touch_sens := 0.005
 @onready var head = $head
 @onready var camera_smooth = $head/camera_smooth
 @onready var camera = $head/camera_smooth/Camera3D
-@onready var gun = $head/camera_smooth/Area3D/weapon/gun   # reference to gun
+@onready var gun = $head/weapon/gun   # reference to gun
 
 # ========================
 # STATE VARIABLES
