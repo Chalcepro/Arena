@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b026b4rgbpyaa"]
+
+[node name="bricks" type="Node3D"]

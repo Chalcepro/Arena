@@ -1,0 +1,276 @@
+[gd_scene format=3 uid="uid://tmpnkcdmbogo"]
+
+[ext_resource type="Script" uid="uid://bq7k5mi4obm7a" path="res://addons/blender-viewport-shortcuts/camera_popup.gd" id="1_dvtt4"]
+[ext_resource type="Texture2D" uid="uid://vye2gafgfdxm" path="res://addons/blender-viewport-shortcuts/icons/ArrowRight.svg" id="3_asqbx"]
+[ext_resource type="Script" uid="uid://d4elb0fhdkbv1" path="res://addons/blender-viewport-shortcuts/extra-controls/ButtonEx.gd" id="3_dvtt4"]
+[ext_resource type="Texture2D" uid="uid://d2xvev1bx8yvg" path="res://addons/blender-viewport-shortcuts/icons/ArrowUp.svg" id="3_imsng"]
+[ext_resource type="Texture2D" uid="uid://4wa585w4nc03" path="res://addons/blender-viewport-shortcuts/icons/ArrowDown.svg" id="4_304ra"]
+[ext_resource type="Texture2D" uid="uid://dc3lvr0palbth" path="res://addons/blender-viewport-shortcuts/icons/Zoom.svg" id="4_imsng"]
+[ext_resource type="Texture2D" uid="uid://sh1t36hud3fo" path="res://addons/blender-viewport-shortcuts/icons/Camera.svg" id="6_dvtt4"]
+[ext_resource type="Texture2D" uid="uid://b2on3yfkw2ypm" path="res://addons/blender-viewport-shortcuts/icons/ArrowLeft.svg" id="8_2m2j5"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2m2j5"]
+device = -1
+keycode = 96
+unicode = 96
+
+[sub_resource type="Shortcut" id="Shortcut_dvtt4"]
+events = [SubResource("InputEventKey_2m2j5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_nqb6b"]
+device = -1
+keycode = 84
+unicode = 116
+
+[sub_resource type="InputEventKey" id="InputEventKey_yf3wn"]
+device = -1
+keycode = 56
+unicode = 56
+
+[sub_resource type="InputEventKey" id="InputEventKey_he738"]
+keycode = 4194446
+
+[sub_resource type="Shortcut" id="Shortcut_yf3wn"]
+events = [SubResource("InputEventKey_nqb6b"), SubResource("InputEventKey_yf3wn"), SubResource("InputEventKey_he738")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_dtrur"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="InputEventKey" id="InputEventKey_joteb"]
+device = -1
+keycode = 57
+unicode = 57
+
+[sub_resource type="InputEventKey" id="InputEventKey_ay5t8"]
+keycode = 4194447
+
+[sub_resource type="Shortcut" id="Shortcut_w8ii0"]
+events = [SubResource("InputEventKey_dtrur"), SubResource("InputEventKey_joteb"), SubResource("InputEventKey_ay5t8")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_w8ii0"]
+device = -1
+keycode = 82
+unicode = 114
+
+[sub_resource type="InputEventKey" id="InputEventKey_jqbdh"]
+device = -1
+keycode = 54
+unicode = 54
+
+[sub_resource type="InputEventKey" id="InputEventKey_i8g7x"]
+keycode = 4194444
+
+[sub_resource type="Shortcut" id="Shortcut_bfwkn"]
+events = [SubResource("InputEventKey_w8ii0"), SubResource("InputEventKey_jqbdh"), SubResource("InputEventKey_i8g7x")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_bfwkn"]
+device = -1
+keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_pt1ro"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="InputEventKey" id="InputEventKey_8kyvp"]
+keycode = 4194441
+
+[sub_resource type="Shortcut" id="Shortcut_wa72i"]
+events = [SubResource("InputEventKey_bfwkn"), SubResource("InputEventKey_pt1ro"), SubResource("InputEventKey_8kyvp")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_wa72i"]
+device = -1
+keycode = 66
+unicode = 98
+
+[sub_resource type="InputEventKey" id="InputEventKey_eyfpk"]
+device = -1
+keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_0ej8x"]
+keycode = 4194440
+
+[sub_resource type="Shortcut" id="Shortcut_buvlh"]
+events = [SubResource("InputEventKey_wa72i"), SubResource("InputEventKey_eyfpk"), SubResource("InputEventKey_0ej8x")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_imsng"]
+device = -1
+keycode = 86
+unicode = 118
+
+[sub_resource type="InputEventKey" id="InputEventKey_dvtt4"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_buvlh"]
+keycode = 4194439
+
+[sub_resource type="Shortcut" id="Shortcut_2m2j5"]
+events = [SubResource("InputEventKey_imsng"), SubResource("InputEventKey_dvtt4"), SubResource("InputEventKey_buvlh")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_75sh6"]
+device = -1
+keycode = 76
+unicode = 108
+
+[sub_resource type="InputEventKey" id="InputEventKey_28tls"]
+device = -1
+keycode = 52
+unicode = 52
+
+[sub_resource type="InputEventKey" id="InputEventKey_vpygo"]
+keycode = 4194442
+
+[sub_resource type="Shortcut" id="Shortcut_mvhxg"]
+events = [SubResource("InputEventKey_75sh6"), SubResource("InputEventKey_28tls"), SubResource("InputEventKey_vpygo")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_mvhxg"]
+device = -1
+keycode = 70
+unicode = 102
+
+[sub_resource type="InputEventKey" id="InputEventKey_a7r1b"]
+device = -1
+keycode = 55
+unicode = 55
+
+[sub_resource type="InputEventKey" id="InputEventKey_ddpst"]
+keycode = 4194445
+
+[sub_resource type="Shortcut" id="Shortcut_ettax"]
+events = [SubResource("InputEventKey_mvhxg"), SubResource("InputEventKey_a7r1b"), SubResource("InputEventKey_ddpst")]
+
+[node name="CameraPopup" type="Container" unique_id=1073132581]
+top_level = true
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -274.5
+offset_top = -196.0
+offset_right = 274.5
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_dvtt4")
+animation_length = 0.2
+shortcut = SubResource("Shortcut_dvtt4")
+text = "View"
+metadata/_custom_type_script = "uid://bcuupdk3f4nkm"
+metadata/_edit_horizontal_guides_ = [74.0]
+
+[node name="btnTop" type="Button" parent="." unique_id=382350454 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(87, 28)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_yf3wn")
+text = "[u]T[/u]op    [color=darkgray]8"
+icon = ExtResource("3_imsng")
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(90, 30)
+
+[node name="btnBack" type="Button" parent="." unique_id=703528167 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(75, 23)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_w8ii0")
+text = "B[u]a[/u]ck    [color=darkgray]9"
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(90, 30)
+
+[node name="btnRight" type="Button" parent="." unique_id=19121537 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(98, 28)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_bfwkn")
+text = "[u]R[/u]ight    [color=darkgray]6"
+icon = ExtResource("3_asqbx")
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(98, 28)
+
+[node name="btnSelected" type="Button" parent="." unique_id=2077925230 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(173, 28)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_wa72i")
+text = "View [u]S[/u]elected      [color=darkgray]3"
+icon = ExtResource("4_imsng")
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(175, 30)
+
+[node name="btnDown" type="Button" parent="." unique_id=1266856300 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_buvlh")
+text = "[u]B[/u]ottom		[color=darkgray]2"
+icon = ExtResource("4_304ra")
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(125, 30)
+
+[node name="btnCamera" type="Button" parent="." unique_id=1191841708 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(159, 28)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_2m2j5")
+text = "[u]V[/u]iew Camera    [color=darkgray]1"
+icon = ExtResource("6_dvtt4")
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(175, 30)
+
+[node name="btnLeft" type="Button" parent="." unique_id=2074728773 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(88, 28)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_mvhxg")
+text = "[u]L[/u]eft    [color=darkgray]4"
+icon = ExtResource("8_2m2j5")
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(88, 28)
+
+[node name="btnFront" type="Button" parent="." unique_id=72554940 node_paths=PackedStringArray("shortcut_context")]
+custom_minimum_size = Vector2(88, 23)
+layout_mode = 2
+shortcut_context = NodePath("..")
+shortcut = SubResource("Shortcut_ettax")
+text = "[u]F[/u]ront	    [color=darkgray]7"
+script = ExtResource("3_dvtt4")
+metadata/_custom_type_script = "uid://d4elb0fhdkbv1"
+metadata/_button_ex_original_size = Vector2(90, 30)
+
+[node name="MouseAreaMargin" type="ReferenceRect" parent="." unique_id=662458884]
+z_index = -100
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+border_color = Color(1, 0, 0, 0)
+border_width = 0.0
+
+[connection signal="pressed" from="btnTop" to="." method="_on_perspective_button_pressed" binds= [0]]
+[connection signal="pressed" from="btnBack" to="." method="_on_perspective_button_pressed" binds= [5]]
+[connection signal="pressed" from="btnRight" to="." method="_on_perspective_button_pressed" binds= [3]]
+[connection signal="pressed" from="btnSelected" to="." method="_on_perspective_button_pressed" binds= [7]]
+[connection signal="pressed" from="btnDown" to="." method="_on_perspective_button_pressed" binds= [1]]
+[connection signal="pressed" from="btnCamera" to="." method="_on_btn_camera_pressed"]
+[connection signal="pressed" from="btnLeft" to="." method="_on_perspective_button_pressed" binds= [2]]
+[connection signal="pressed" from="btnFront" to="." method="_on_perspective_button_pressed" binds= [4]]

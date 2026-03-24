@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp4hh72y2r87y"]
+
+[ext_resource type="PackedScene" uid="uid://bxrv22shuksaj" path="res://blender assets/bricks.blend" id="1_4dl3o"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="bricks" parent="." instance=ExtResource("1_4dl3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2586, -1.19209e-07, -0.0630796)

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://daakih3wx58yk"]
+
+[ext_resource type="Texture2D" uid="uid://0ylgmieg23y5" path="res://addons/blender-viewport-shortcuts/icons/selection.svg" id="1_cmolp"]
+[ext_resource type="Texture2D" uid="uid://doj6lv8q4vgwn" path="res://addons/blender-viewport-shortcuts/icons/selection_overlay.svg" id="2_1uw87"]
+
+[node name="CenterContainer" type="CenterContainer" unique_id=838603228]
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=566165056]
+modulate = Color(1, 1, 1, 0.39215687)
+layout_mode = 2
+texture = ExtResource("1_cmolp")
+stretch_mode = 5
+
+[node name="TextureRectSelector" type="TextureRect" parent="." unique_id=32622660]
+layout_mode = 2
+texture = ExtResource("2_1uw87")
+stretch_mode = 5

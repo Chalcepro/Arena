@@ -8,9 +8,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qlg0r"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
-radius = 0.25
-height = 0.5
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qhqgy"]
+height = 1.5
 
 [node name="PlayerNode" type="Node3D"]
 
@@ -52,13 +51,9 @@ script = ExtResource("4_dqkch")
 
 [node name="WeaponMeshHolder" type="Node3D" parent="CharacterBody3D/head/weapon/gun"]
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523193, 0)
-height = 1.05
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("CapsuleShape3D_u8vuu")
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.753, 0)
+shape = SubResource("CapsuleShape3D_qhqgy")
 
 [node name="health" type="Node3D" parent="CharacterBody3D"]
 script = ExtResource("5_qlg0r")
