@@ -45,6 +45,9 @@ var touch_sens := 0.005
 @export var fall_threshold_y := -10.0           # reset when below this Y
 @export var reset_action := "reset"          # input action for manual reset
 
+# Coyote time (edge jump forgiveness)
+@export var coyote_time := 0.2        # seconds after leaving ground to still allow jump
+
 # ========================
 # NODE REFERENCES
 # ========================
@@ -81,6 +84,10 @@ var boost_speed := 0.0
 
 # Spawn position (fallback)
 var default_spawn := Vector3.ZERO
+
+# Coyote time tracking
+var was_on_floor := true
+var coyote_timer := 0.0
 
 # ========================
 # READY
@@ -173,21 +180,33 @@ func reset_player():
 func _physics_process(delta):
 	var on_floor = is_on_floor()
 	
+	# --- Coyote time update ---
+	if on_floor and not was_on_floor:
+		# Just landed – reset timer
+		coyote_timer = 0.0
+	elif not on_floor and was_on_floor:
+		# Just left ground – start timer
+		coyote_timer = coyote_time
+	elif not on_floor:
+		# In air – count down
+		coyote_timer = max(coyote_timer - delta, 0.0)
+	
+	was_on_floor = on_floor
+	
 	# --- Fall out of world reset ---
 	if global_position.y < fall_threshold_y:
 		reset_player()
-		# Small delay to avoid immediate re‑fall if spawn is also low
-		# but we'll just return after reset to skip processing this frame
 		return
 
 	# Gravity
 	if not on_floor:
 		velocity.y -= gravity * delta
 
-	# Jump
-	if Input.is_action_just_pressed("jump") and on_floor:
+	# Jump – allow if on floor or coyote timer active
+	if Input.is_action_just_pressed("jump") and (on_floor or coyote_timer > 0):
 		velocity.y = JUMP_FORCE
 		sliding = false
+		coyote_timer = 0.0   # Prevent double jump
 
 	# Input
 	var input = Input.get_vector("move_right","move_left","move_backward","move_forward")

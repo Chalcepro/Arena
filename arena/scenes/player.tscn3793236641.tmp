@@ -36,7 +36,7 @@ shape = SubResource("SphereShape3D_3vyb7")
 [node name="weapon" type="Node3D" parent="CharacterBody3D/head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.33454e-08, 0, -0.724586)
 
-[node name="gun" parent="CharacterBody3D/head/weapon" instance=ExtResource("2_qhqgy")]
+[node name="bullet_node" parent="CharacterBody3D/head/weapon" instance=ExtResource("2_qhqgy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42, -0.315, 0.305)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]

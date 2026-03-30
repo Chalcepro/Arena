@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch3i7q8qlum1a"]
+
+[ext_resource type="Script" uid="uid://o5xec1gmmct5" path="res://scripts/gun.gd" id="1_5awqr"]
+[ext_resource type="Script" uid="uid://cgp673k8nipn1" path="res://scripts/bullet.gd" id="1_kulgk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5awqr"]
+size = Vector3(0.3, 0.3, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ha2t7"]
+
+[node name="gun" type="Node3D"]
+script = ExtResource("1_5awqr")
+
+[node name="bullet" type="CharacterBody3D" parent="."]
+script = ExtResource("1_kulgk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bullet"]
+shape = SubResource("BoxShape3D_5awqr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bullet"]
+transform = Transform3D(0.3, 0, 0, 0, -2.18557e-08, 0.3, 0, -0.5, -1.31134e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_ha2t7")
+skeleton = NodePath("../CollisionShape3D")
