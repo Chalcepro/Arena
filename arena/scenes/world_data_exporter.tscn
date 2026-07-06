@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq6g2bpaobdmp"]
-
-[ext_resource type="Script" uid="uid://bg0146fk8jxve" path="res://scripts/world_Updater.gd" id="1_sl4ft"]
-
-[node name="World_Data_Exporter" type="Node3D"]
-script = ExtResource("1_sl4ft")

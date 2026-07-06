@@ -2,9 +2,9 @@
 
 [ext_resource type="Shader" uid="uid://c18f2s6lv6efp" path="res://material/wall_2.gdshader" id="1_5t4e2"]
 [ext_resource type="PackedScene" uid="uid://bxrv22shuksaj" path="res://blender assets/bricks.blend" id="1_ns6u7"]
-[ext_resource type="PackedScene" uid="uid://brigfbx2lvrl2" path="res://scenes/player.tscn" id="2_5t4e2"]
+[ext_resource type="PackedScene" uid="uid://qcxhdkirmv3m" path="res://scenes/player.tscn" id="2_5t4e2"]
 [ext_resource type="PackedScene" uid="uid://b1u0w8ihhxjmg" path="res://scenes/lights.tscn" id="4_xvgsr"]
-[ext_resource type="PackedScene" uid="uid://bq6g2bpaobdmp" path="res://scenes/world_data_exporter.tscn" id="5_oqwcg"]
+[ext_resource type="PackedScene" path="res://scenes/world_data_exporter.tscn" id="5_oqwcg"]
 [ext_resource type="PackedScene" uid="uid://dcc8l8t0ypgnv" path="res://scenes/enemy.tscn" id="6_a6664"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xvgsr"]
