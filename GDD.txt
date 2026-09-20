@@ -2,7 +2,7 @@ Game Design Document: Area
 1. Game Overview
 Title: Area
 Genre: Stylized FPS / Tactical Arena / Battle Royale
-Platform: PC only
+Platform: PC first. Mobile (Android) and controller support are later targets (see engine roadmap: Windows → Web → Android) — not in scope for the first playable build, but per-input balance (aim assist tuning, sensitivity handling) will need its own pass when they land.
 Perspective: First-Person
 Player Count: 5–10 players (2 teams max 10 per team)
 Art Style: Low-poly, stylized, minimalist. Hexagon motif in gameplay and UI.
@@ -46,7 +46,7 @@ BUT depending on the perk there would be a consequence. E.g Should would make yo
 3.1 Standard Dome Arena (medium variation to reduce camp spots and encourage movement) 
 Medium-sized, closed dome
 Strategic weapon spawns
-Team bases with life shards (only in normal mode) clearly marked. But in arena YOU carry your shard (it would be advices to play in a team) each team would be given a color (making them distinguishable from others and it will match the shard) when killed, team members can revive them (CAUTION: they will spawn EXACTLY where they died) each member will and must look different either varying in height, stature or gender
+Team bases with life shards (only in normal mode) clearly marked. But in arena YOU carry your shard (it would be advices to play in a team) each team would be given a color (making them distinguishable from others and it will match the shard) when killed, team members can revive them (CAUTION: they will spawn EXACTLY where they died) each member will and must look different either varying in height, stature or gender — visual variation only, hitbox stays uniform across all players regardless of height/stature. Grow/Shrink perks (§2.3) remain the only way to change hitbox size, since they're earned and come with a stated tradeoff; a passive, unearned size-based hitbox difference would break the "same playing field" goal in §8.
 Low-poly terrain: ramps, walls, floors (placeholders or custom assets which would be modified later in future)
 3.2 Battle Royale Arena (Optional/Advanced)
 Large map, open environment
@@ -81,6 +81,13 @@ Weapon pickups scattered in arena
 Life shard system replaces traditional respawn:
 No shard → cannot play until revived by teammate
 Encourages coordination
+6.1 Base/Spawn Rules
+The spawn point is a portal-like door — a boundary you must clear before you're "in the game"
+Weapon selection (swap loadout) is only available inside your own spawn
+Once outside spawn, you can't re-enter it unless returning a shard (to revive a teammate)
+An enemy who grabs a shard from inside your base is immediately force-pushed out — no camping the base with a stolen shard
+Bullets cannot cross the spawn boundary in either direction — you can't be shot while inside, and can't shoot into an enemy's spawn from outside
+A player gets 2–3 seconds of grace armor after crossing out of their spawn boundary, so they can't be sprayed down the instant they leave
 7. Progression & Scoring
 No leaderboard for now
 Future: XP, cosmetic unlocks, skins, or mod support possible
@@ -90,6 +97,7 @@ Fast, strategic gameplay — not purely shooting
 Hexagon motif visible in perks, map, and UI
 Low-poly aesthetic keeps focus on gameplay mechanics
 Tactical teamwork is rewarded over lone-wolf kills
+Same playing field for everyone: no perk, weapon, or attachment ever removes recoil/sway entirely or grants a guaranteed hit — turning fast always costs some accuracy, no exceptions. This is the test any future perk or weapon idea gets held against.
 9. Assets & Placeholders
 Ramps, walls, floors — can be replaced with final assets later
 Weapon models: basic placeholders

@@ -29,8 +29,13 @@ endgame quick and clean.
     calls it.
 - Which reading does the pillar want? Decide before implementing.
 
-**Design-lens take.** The instinct is right — anti-spawn-lock, faster decisive
-endgame. Cleanest rule that fits the existing system: **once a team is down to
-one, that player cannot be revived and cannot self-revive; losing their shard
-ends the match.** No new timer, no new state — just "revive is disabled at
-team-size 1." Confirm this matches the intent.
+**CONFIRMED 2026-09-03.** Once a team is down to one player, that player cannot be
+revived and cannot self-revive; losing their shard ends the match. **No grace
+timer** in the base game. Just: revive disabled at team-size 1.
+
+*Implemented (milestone 1, `hex/scripts/arena.lua`):* single-player vs bots — no
+teammates, so a shard taken ends it, which satisfies DN-1 by construction. The
+explicit "revive disabled at team-size 1" branch lands with the revive system.
+
+*Future (not base game):* "luck points" — a resource that could buy a lone last
+player a reprieve. Parked; revisit post-blockout.
