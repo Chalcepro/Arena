@@ -58,22 +58,55 @@ size.
 
 ---
 
-## DN-3 · Map v2: lanes, open high ground, wall slopes (proposed 2026-10-17)
+## DN-3 · Map v2: an infinite-maze of tiles, open high ground, wall slopes (2026-10-17)
 
-From Chalce's play-test of the first movement map. That map is a good base,
-but it has too little detail.
+From Chalce's play-test of the first movement map. That map stays as a test of
+jump and sprint limits. It's fine for that, but it has too little detail.
 
-- **Layout:** a main lane from A to B, routes round the sides, and raised
-  **shortcuts** between them.
-- **High ground is open:** perches and shortcuts let you see players, and
-  they can see you. Cover no taller than a crouch, no rooms you can hide in,
-  peeking always shows you.
-- **Wall slopes** along the side routes: surfaces too steep to stand on that
-  you can run along with momentum. Fall off and you're in the void.
-- Generator change: lay the lane skeleton first, then fill it with tiles, with
-  new tile groups for wall slopes, catwalks and perches.
+**The tiles are a measured kit, like Unreal's template assets.** The point of
+building maps from tiles is that the sizes carry the rules: anything taller
+than X can't be climbed, lower than Y can't be crouched under, wider than Z
+can't be cleared even sprinting. People can swap a tile's look for their own
+art, but they keep its measurements (or go smaller), or the movement and later
+the animation break. That makes maps easy to make and easy to understand.
+The measurements come from Hex's own movement once it's settable, NOT from
+the Godot-era GDD numbers (`hex/docs/flows/movement.md`).
 
-Needs Hex movement v2 first (momentum, collision on all faces, wall
-slopes). See `hex/docs/flows/movement.md`. Chalce has a Godot test scene with
-a big slope and a wall slope (probably `arena/scenes/node_3d.tscn`) and a
-Blender sketch of the shortcut layout. Both to be looked at before building.
+**The map he has in mind:** blocks used one for one, laid out like the
+abstract "infinite rooms" artwork: staircases into staircases, into rooms,
+out into more staircases, doors everywhere, a maze with complexity. Nearly
+all of it climbable. Not the sideways or upside-down parts, which are only the
+look of the reference.
+
+**High ground is open:** shortcuts and perches above the main routes. You can
+see players and they can see you. Cover no taller than a crouch, nowhere to
+hide, peeking always shows you.
+
+**Layout:** a main lane from A to B, routes round the sides, raised shortcuts
+between them.
+
+**Wall slopes:** too steep to stand on, runnable with momentum, gravity still
+pulls you down. Miss and you're in the void.
+
+**Examples:**
+- `arena/blender assets/test_ground.blend`, object `obj-55.col.003`: a channel.
+  Low lane down the middle, steep slopes up to ~13 m on both sides, raised
+  triangle perches joined by ramps. That's the wall-slope and shortcut shape.
+- `arena/scenes/node_3d.tscn` (Godot): a hand-built bricks level with tilted
+  slab patches. That's the big slope and wall slope test.
+
+Needs Hex movement v2 first (settable momentum, collision on every face, wall
+slopes).
+
+---
+
+## DN-4 · Live-changing maps (game mode, parked 2026-10-17)
+
+In some game modes the map changes during the match, like a maze. Closed doors
+open, open ones close, a wall drops away. A route you could cross is gone, and
+one you couldn't is there. Nobody gets to sit in one spot: you might be thrown
+off the map, or the wall behind you opens and the other team is there.
+
+Parked, but build so it stays possible: tiles stay separate objects that the
+game can move, open and remove at runtime (not baked into one mesh), and
+doors/walls are their own pieces.
