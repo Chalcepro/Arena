@@ -8,8 +8,9 @@ one Hex entity:
   steeper ramps                     -> "ramp.glb", solid: a wall you can't run up
   markers                           -> floor, so they never trip you
 
-The player, camera and scripts come from the arena scene, so it plays with
-arena.lua. Blender is Z-up and Hex is Y-up: (x, y, z) -> (x, z, -y), and a
+The player and camera come from the arena scene. The scene runs only
+player.lua (walk, sprint, jump, slide): a map on its own carries no game
+rules and no HUD text. Pass scripts=[...] to add some. Blender is Z-up and Hex is Y-up: (x, y, z) -> (x, z, -y), and a
 turn about Blender Z is the same turn about Hex Y.
 
 Run inside Blender with movement_map.blend open:
@@ -94,7 +95,7 @@ def _entity(name, mesh, mw, local_min, local_max, flags, colour, base_centre):
     }
 
 
-def export(hex_root, scene_name="movement", template="arena"):
+def export(hex_root, scene_name="movement", template="arena", scripts=("player",)):
     tpl_path = os.path.join(hex_root, "scenes", template + ".hexscene")
     with open(tpl_path, encoding="utf-8") as f:
         tpl = json.load(f)
@@ -146,7 +147,7 @@ def export(hex_root, scene_name="movement", template="arena"):
         "version": 3,
         "tagnames": tpl.get("tagnames", {}),
         "entities": ents,
-        "scripts": tpl.get("scripts", ["arena", "player", "interact"]),
+        "scripts": list(scripts),
     }
     out = os.path.join(hex_root, "scenes", scene_name + ".hexscene")
     with open(out, "w", encoding="utf-8", newline="\n") as f:
