@@ -55,3 +55,25 @@ movement (sprint, jump gaps 2-14 m, step heights, slide lanes, ramps, decks).
 could be the tiles themselves dropping away, so the map literally collapses
 from the edge in. Not for MP maps. MP maps stay well under half the BR map's
 size.
+
+---
+
+## DN-3 · Map v2: lanes, open high ground, wall slopes (proposed 2026-10-17)
+
+From Chalce's play-test of the first movement map. That map is a good base,
+but it has too little detail.
+
+- **Layout:** a main lane from A to B, routes round the sides, and raised
+  **shortcuts** between them.
+- **High ground is open:** perches and shortcuts let you see players, and
+  they can see you. Cover no taller than a crouch, no rooms you can hide in,
+  peeking always shows you.
+- **Wall slopes** along the side routes: surfaces too steep to stand on that
+  you can run along with momentum. Fall off and you're in the void.
+- Generator change: lay the lane skeleton first, then fill it with tiles, with
+  new tile groups for wall slopes, catwalks and perches.
+
+Needs Hex movement v2 first (momentum, collision on all faces, wall
+slopes). See `hex/docs/flows/movement.md`. Chalce has a Godot test scene with
+a big slope and a wall slope (probably `arena/scenes/node_3d.tscn`) and a
+Blender sketch of the shortcut layout. Both to be looked at before building.
