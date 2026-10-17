@@ -550,8 +550,11 @@ def build(kit_path, size=6, seed=None):
     if missing:
         with bpy.data.libraries.load(kit_path, link=False) as (src, dst):
             dst.objects = [n for n in src.objects if n in missing]
-        for o in dst.objects:
-            kit.objects.link(o)
+    # every kit object lives in KIT: an object nothing links is dropped on
+    # save, and the exporter finds the kit by these names
+    for n in KIT.values():
+        if n not in kit.objects:
+            kit.objects.link(bpy.data.objects[n])
 
     lib = _coll("TILES", root)
     _clear(lib)
