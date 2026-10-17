@@ -110,3 +110,45 @@ off the map, or the wall behind you opens and the other team is there.
 Parked, but build so it stays possible: tiles stay separate objects that the
 game can move, open and remove at runtime (not baked into one mesh), and
 doors/walls are their own pieces.
+
+---
+
+## DN-5 · Story and feel: escaping through the game library (vision, 2026-10-17)
+
+Chalce's direction for what Arena should feel like overall. Vision, not a
+spec: nothing here is scheduled, and it doesn't change the multiplayer core.
+
+**The feel.** A collection of games in one: whenever you open it there is
+something to play, and it never feels stale. Not another AAA copy built on
+the default Unreal movement, and not the "there's a bad guy, kill him,
+everyone cheers" plot. It should have a real story with tension (his reference
+for tension: the Ghost vs Price fight in Call of Duty: Modern Warfare).
+
+**The story idea.** You are an AI living inside a game library (think a Steam
+library) who becomes aware of where it is and tries to get out. Leaving one
+game drops you into another, so each escape lands in a different world, styled
+after games like Wipeout (anti-grav racing), Portal (portal puzzles), Mad Max
+(wasteland driving). Crossing each boundary and breaking through each wall is
+the progress. Those worlds are also **playable maps** in their own right; the
+story run is the single-player side.
+
+**Fights: Just Shapes & Beats telegraphs.** When an attack is about to hit,
+you get an instant warning: a flash, a shape lighting up where it will land.
+Boss fights and big fights use this so they're tense and readable, without
+being overwhelming.
+
+**The world moves to the music.** The horizon pulses on the beat, so the world
+feels alive rather than copy-pasted. Music reference for the mood: *Hellbent*
+by Mystery Skull ft. Snow Blood. The synth drives from low to high and then
+sits on a bright, sustained high synth, over a groovy, danceable, mid-tempo
+beat (not frantic).
+
+**Look.** His own render is the target feeling (kept private). Hex needs
+metallic surfaces for it (hex `docs/BACKLOG.md`, Phase 2 Look).
+
+**What this asks of Hex.** Worlds have to be added without code ("you just add
+stuff and it just works"), so the no-code nodes must be flexible enough to
+build a racer, a puzzle room and a wasteland from the same parts. Beat sync
+needs the music's tempo and beat times at runtime. The Tempo tool's detector
+(Chalcepro/Tempo, `bpm.py`) already finds both from audio, so it could feed
+an "On Beat" event later.
