@@ -39,3 +39,19 @@ explicit "revive disabled at team-size 1" branch lands with the revive system.
 
 *Future (not base game):* "luck points" — a resource that could buy a lone last
 player a reprieve. Parked; revisit post-blockout.
+
+---
+
+## DN-2 · Tile maps and the collapsing edge (proposed 2026-10-17)
+
+**Idea.** Maps are assembled from grouped tiles (bricks kit, 16 m squares): a
+group runs for a few tiles, picking the best-fitting tile next to the last, then
+a built wall ends it and the next group starts. The seed is fixed, so it bakes
+ONE map; it does not change per load. Generator: `tools/blender/tilemap.py`.
+First map: `arena/blender assets/movement_map.blend`, 96 x 96 m, made for testing
+movement (sprint, jump gaps 2-14 m, step heights, slide lanes, ramps, decks).
+
+**Parked for Battle Royale.** The map floats in a void, so the shrinking zone
+could be the tiles themselves dropping away, so the map literally collapses
+from the edge in. Not for MP maps. MP maps stay well under half the BR map's
+size.
